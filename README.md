@@ -1,6 +1,6 @@
 # Scheduler App
 
-  This is a simple front-end application for scheduling events using Next JS, Material UI and FullCalendar.
+  This is a simple front-end application made for Ccript to schedule events using Next JS, Material UI and FullCalendar.
 
 - ## Installing
 
@@ -31,4 +31,16 @@
 - ## Deployment (Vercel)
 
   Alternatively, this application can also be viewed at `https://ccript-task.vercel.app/`.
+
+- ## Learn More
+
+  For further documentation:
+
+1. Node JS
+- [Learn more about Node JS](https://nodejs.org/en) - an open-source, cross-platform JavaScript runtime environment.
+2. Next.JS
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Vercel
+- [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
