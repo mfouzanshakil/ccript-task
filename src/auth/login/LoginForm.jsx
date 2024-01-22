@@ -3,12 +3,31 @@ import { useRouter } from "next/router";
 import { Box, TextField, Button, CardMedia } from "@mui/material";
 import logo from "../../../public/ccript-logo.jpg";
 import { Formik, Form, Field } from "formik";
+import axios from "../../../node_modules/axios";
 
 const LoginForm = () => {
   const router = useRouter();
-  const handleFormSubmit = (values) => {
-    console.log("values", values);
-    router.push("/main");
+
+  const handleFormSubmit = async (values) => {
+    const formData = {
+      username: String(values.email),
+      password: String(values.password),
+    };
+
+    try {
+      const response = await axios({
+        method: "post",
+        headers: {},
+        url: "https://hiring-test-task.vercel.app/api/login",
+        data: formData,
+      });
+      if (response.status === 200) {
+        console.log("Congrats!", response);
+        router.push("/main");
+      } else alert("invalid credentials");
+    } catch (error) {
+      console.log("Error!", error);
+    }
   };
 
   return (
@@ -36,7 +55,7 @@ const LoginForm = () => {
             render={({ field }) => (
               <TextField
                 {...field}
-                label="Email"
+                label="Username"
                 variant="filled"
                 sx={{ mb: 2 }}
                 type={"email"}
