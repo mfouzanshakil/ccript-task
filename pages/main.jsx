@@ -1,16 +1,8 @@
 import React from "react";
-import { Box, Typography } from "@mui/material/Button";
-import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from '@fullcalendar/daygrid'
-import interactionPlugin from "@fullcalendar/interaction"
-import timeGridPlugin from "@fullcalendar/timegrid"
+import CalendarPage from "../components/CalendarPage";
 
-const CalendarPage = () => {
-  return (
-    <div style={{}}>
-      <FullCalendar plugins={[ dayGridPlugin, interactionPlugin, timeGridPlugin ]} initialView="dayGridMonth" />
-    </div>
-  );
+const HomePage = () => {
+  return <CalendarPage />;
 };
 
-export default CalendarPage;
+export default HomePage;

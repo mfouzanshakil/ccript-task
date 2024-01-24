@@ -1,6 +1,8 @@
 import React from "react";
-import LoginForm from "../src/auth/login/LoginForm";
+import LoginForm from "../components/LoginForm";
 
-export default function Home() {
+const Appointments = () => {
   return <LoginForm />;
-}
+};
+
+export default Appointments;

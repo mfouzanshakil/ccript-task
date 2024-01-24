@@ -1,9 +1,9 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { Box, TextField, Button, CardMedia } from "@mui/material";
-import logo from "../../../public/ccript-logo.jpg";
+import logo from "../public/ccript-logo.jpg";
 import { Formik, Form, Field } from "formik";
-import axios from "../../../node_modules/axios";
+import axios from "../node_modules/axios";
 
 const LoginForm = () => {
   const router = useRouter();
@@ -23,6 +23,7 @@ const LoginForm = () => {
       });
       if (response.status === 200) {
         console.log("Congrats!", response);
+        localStorage.setItem("token", response?.data?.token);
         router.push("/main");
       } else alert("invalid credentials");
     } catch (error) {
